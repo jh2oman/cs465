@@ -10,6 +10,7 @@ Setup Instructions:
    The project should now be running at http://localhost:3000/
 
 The Files:
+
 	.meteor folder - packages, don't worry about it
 
 	bootstrap folder - where all of the bootstrap code is

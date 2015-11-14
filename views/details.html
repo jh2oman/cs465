@@ -1,4 +1,119 @@
 <template name="details">
-<h1>Details Page</h1>
-<button class="btn btn-default goToHome" type="submit">Go Home</button>
-</template>
+
+	<div class="row">
+		<div class="col-sm-4">
+			<div id="main-photo"></div>
+			<div id="small-photos">
+				<div id="small-photo1"></div>
+				<div id="small-photo2"></div>
+				<div id="small-photo3"></div>
+				<div id="small-photo4"></div>
+				<div id="small-photo5"></div>
+				<div id="small-photo6"></div>
+			</div>
+		</div>
+		<div class="col-sm-5">
+			<h1 class="apartment-title">408 East Daniel</h1>
+			<h4 class="address">408 E Daniel St, Champaign, IL 61820</h4>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>$2022/mo</th>
+						<th>4Bed / 2Bath</th>
+						<th>Agent: Bankier</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><img src ="stars.png"><span id="comment-number">23 comments</span></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+			<div class="facts">
+				<ul>
+					<li>Free high speed internet</li>
+					<li>Intercom System</li>
+					<li>Elevator</li>
+					<li>Jacuzzi</li>
+					<li>Parking Available</li>
+				</ul>
+
+				<ul>
+					<li>Central Air</li>
+					<li>Dishwasher</li>
+					<li>Washer/Dryer Unit</li>
+					<li>Balconies off Each Room</li>
+					<li>50" Flat Screen TV</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-sm-3">
+			<div id="google-maps"></div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-6">
+			<p class="paragraph">These 4 bedroom 2 1/2 bathroom apartments redefine luxury. These units feature unequaled amenities and a Green Street location in the heart of Campus town. Expansive windows provide lots of natural sunlight. You'll enjoy the great views from the balconies off of every room. The luxury package is completed with beautiful furnishings, full size washer/dryer, and a Jacuzzi. We have a courteous, professional staff that includes 24-hour emergency maintenance. Please e-mail, call or stop by our office for more information.</p>
+			
+		</div>
+		<div class="col-sm-6">
+			<div class="iframe-wrapper">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/-MeLiBHvdcc" frameborder="0" allowfullscreen></iframe>
+			</div>
+		</div>
+	</div>
+	<h1 class="comment-title">Comments & Revies</h1>
+	<div id="global">
+		<div class="postform">
+			<form>
+				<div class="headform">
+					<strong> Leave Your Own Comment</strong>
+					
+				</div>
+				<label>
+					<textarea name="msg" placeholder="Comment on 408 East Daniel"></textarea>
+				</label>
+				<input type="submit" value="Submit" class="submit">
+			</form>
+		</div>
+		<div class="messages">
+			<div class="message">
+				<div class="triangle"></div>
+				<img src="https://randomuser.me/api/portraits/med/men/23.jpg" class="avatar">
+				<p><strong>George,<em> posted 2014/12/23 at 3:06 PM</em></strong>
+					Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+				</div>
+
+				<div class="message">
+					<div class="triangle"></div>
+					<img src="https://randomuser.me/api/portraits/med/women/49.jpg" class="avatar">
+					<p><strong>Sandra,<em> posted 2014/12/21 at 7:06 AM</em></strong>
+						Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make.
+
+					</p>
+				</div>
+				<div class="messages">
+					<div class="message">
+						<div class="triangle"></div>
+						<img src="https://randomuser.me/api/portraits/med/women/41.jpg" class="avatar">
+						<p><strong>Laure,<em> posted 2014/11/23 at 5:27 PM</em></strong>
+							Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC.<br> This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+						</p>
+					</div>
+
+					<div class="message">
+						<div class="triangle"></div>
+						<img src="https://randomuser.me/api/portraits/med/men/68.jpg" class="avatar">
+						<p><strong>Ian,<em> posted 2014/11/23 at 4:32 PM</em></strong>
+							It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages.<br>
+							There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words.
+
+						</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		</template>

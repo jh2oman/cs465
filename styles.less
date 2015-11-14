@@ -1,4 +1,260 @@
 /* CSS declarations go here */
+body{
+	width:100%;
+}
+.row{
+	margin-right: 0px;
+	margin-left: 0px;
+	max-width: 1300px;
+	margin:0 auto;
+}
 .navbar-btn{
 	float:right;
+}
+#main-photo{
+	margin:0 auto;
+	height:300px;
+	max-width: 400px;
+	overflow:hidden;
+	background: url("apartment-room.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.37);
+}
+#small-photos{
+	margin:0 auto;
+	max-width: 400px;
+	overflow: hidden;
+	height:50px;
+	background: url("layout.png");
+	background-repeat: repeat;
+	background-size: 50px auto;
+	padding-right: -70px;
+	box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.37);
+}
+#small-photos div{
+	height:70px;
+	width:70px;
+	float: left;
+	border:1px solid #000;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+#small-photo1{
+	background: url("colorful-ambelokipi-apartment-kitchen-design.jpg");	
+}
+#small-photo2{
+	background: url("bedroom.jpg");	
+}
+#small-photo3{
+	background: url("bedroom2.jpg");	
+}
+#small-photo4{
+	background: url("images-19.jpg");	
+}
+#small-photo5{
+	background: url("balcony.jpg");	
+}
+#small-photo6{
+	background: url("layout.png");
+}
+.apartment-title{
+	margin:0;
+}
+#google-maps{
+	margin:0 auto;
+	height:250px;
+	width:250px;
+	background: url("google-maps.png");
+	background-repeat: no-repeat;
+	background-position: center;
+	box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.37);
+}
+.address{
+	font-style: italic;
+}
+.facts{
+	width: 100%;
+}
+.facts ul{
+	width:50%;
+	float:left;
+}
+#comment-number{
+	position:absolute;
+	margin-left: 8px;
+    margin-top: 8px;
+    font-size: .8em;
+}
+.paragraph{
+	margin: 108px auto;
+	display:block;
+	max-width: 500px;
+	font-size: 1.1em;
+	font-weight: bold;
+	text-align: justify;
+}
+.comment-title{
+	text-align: center;
+}
+.iframe-wrapper{
+	margin:40px auto;
+	display:inline-block;
+
+}
+
+
+
+
+
+
+//Commment section
+*{font-family:calibri;}
+
+.avatar{
+  border-radius:100px;
+  width:80px;
+  height:80px;
+  float:left;
+}
+.message{
+  position:relative;
+  clear:both;
+  width:590px;
+}
+.message .avatar{
+  margin-top:5px;
+}
+.message p{
+  float:left;
+  font-family:calibri;
+  color:#333;
+  width:450px;
+  margin:0;
+  margin-left:20px;
+  margin-top:5px;
+  padding:10px;
+  background-color:#fafafa;
+  border:1px solid #eee;
+  border-radius:5px;
+  margin-bottom:10px;
+  word-spacing:3px;
+  line-height:22px;
+}
+.message p em.info{
+  display:block;
+  text-align:right;
+  margin-top:10px;
+  font-size:12px;
+  font-weight:bold;
+  color:#666px;
+}
+.message p strong{
+  display:block;
+  color:#428bca;
+  border-bottom:1px solid #ddd;
+  margin-bottom:10px;
+}
+.message p strong em{
+  font-weigh:normal;
+  color:#333;
+  font-size:10pt;
+}
+.message .triangle{
+  display:block;
+  position:absolute;
+  left:85px;
+  top:25px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 15px 10px 0;
+  border-color: transparent #eeeeee transparent transparent;
+}
+
+.inverse .avatar{float:right;}
+.inverse p{float:none;background-color:#eee;}
+.inverse .triangle{
+  display:block;
+  position:absolute;
+  left:490px;
+width: 0;
+height: 0;
+border-style: solid;
+border-width: 10px 0 10px 15px;
+border-color: transparent transparent transparent #eeeeee;
+}
+
+#global{
+  width:1300px;
+  margin: 0 auto;
+}
+.messages{float:left;}
+.postform{
+  display:block;
+  width:518px;
+  float:right;
+  padding-left:18px;
+  border-left:2px solid #eee;
+}
+.postform form label{
+  display:block;
+}
+.postform form label textarea{
+  width:480px;
+  height:300px;
+  border-radius:10px;
+  background-color:#efefef;
+  border:0;
+  padding:10px;
+  font-size:12pt;
+  color:#333;
+  font-style:italic;
+}
+.postform form div.headform{
+  padding-bottom:10px;
+  color:#666;
+}
+.postform form div.headform strong{
+  display:block;
+  font-size:14pt;
+  color:#428bca;
+  padding-bottom:10px;
+}
+.postform form div.headform strong span{
+  color:#333;
+}
+.postform form .submit{
+  display:block;
+  width:200px;
+  height:30px;
+  background-color:#428bca;
+  color:#fff;
+  border:0;
+  border-radius:5px;
+  margin-top:5px;
+  float:right;
+  cursor:pointer;
+  margin-right:18px;
+}
+.postform a{
+  color:#428bca;
+}
+
+@media screen and (max-width: 1140px) {
+  #global{width:100%;}
+  .message{float:none;margin:auto;}
+  .messages{float:none;margin:auto;}
+  .postform{float:none;height:275px;margin:auto;border:0;}
+  .postform form label textarea {height:150px;}
+}
+@media screen and (max-width: 620px) {
+  
+  body{margin-right:60px;}
+  .message .avatar,.inverse .avatar,.message .triangle,.inverse .triangle{display:none;}
+  .postform,.postform form label textarea,.message,.message p{width:100%;}
+  .postform{height:initial}
+  .postform form .submit{margin:auto;margin:10px 0;}
 }
