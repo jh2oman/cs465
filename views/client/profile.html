@@ -1,0 +1,208 @@
+<template name="profile">
+    <div class="profile_page">
+        <h1>Profile Page</h1>
+        <div class="content-wrapper">
+            <div class="left_section col-md-4">
+                <div class="left-fixed">
+                    <div class="user_img">
+                        <img src="Minions_bob_and_his_teddy_bear.jpg" alt="Bob" style="width:260px;height:260px;border: 5px;border-style: inset">
+                        <h2>Bob</h2>
+                        <button type="button" class="btn btn-success">View</button>
+                        <button type="button" class="btn btn-danger">Edit</button>
+                    </div>
+                    <div class="user_bg">
+                        <h3>Personal Info:</h3>
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label>  Email:&nbsp;Bob@Minions.com</label>
+                            </div>
+                            <div class="form-group">
+                                <label>  Phone#:&nbsp;(217)598-1234</label>
+                            </div>
+                            <div class="form-group">
+                                <label>  Friends:&nbsp;~1000</label>
+                            </div>
+                            <div class="form-group">
+                                <label>  Reviews:&nbsp;10W+</label>
+                            </div>
+                        </form>
+
+
+
+                    </div>
+                    <div class="house_preference">
+                        <h3>Housing Preference:</h3>
+                        <div class="house_preference_tag_wrapper">
+                            <input type="text" name="tags" placeholder="Tags" class="house_preference_tag tm-input tm-input-success tm-input-base"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right_section col-md-8">
+                <div class="freq_location">
+                    <div class="freq_location_tags">
+                        <h3>Frequent Location:</h3>
+                        <span id="siebel" class="tm-tag tm-input-base tm-tag-success">Siebel Center
+                            <a href="#" class="tm-tag-remove" id="siebel_remove" tagidtoremove="siebel">x</a>
+                        </span>
+                    </div>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-danger" onclick="show_map()">
+                        Edit
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="google_maps" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Frequent Location Added</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Type location like lat,lng" id="drop_loc">
+                                                <span class="input-group-btn">
+                                                <button class="btn btn-default" type="button" onclick="drop_pin()">Drop!</button>
+                                        </span>
+                                    </div><!-- /input-group -->
+                                    <div class="map" id="map">
+                                    </div>
+                                </div>
+                                <!--<div class="modal-footer">-->
+                                    <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                                    <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+                                <!--</div>-->
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="scheduled_showing">
+                    <h3>Scheduled Showing:</h3>
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#upcoming">Upcoming</a></li>
+                        <li><a data-toggle="tab" href="#candidate">Candidate</a></li>
+                        <li><a data-toggle="tab" href="#history">History</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div id="upcoming" class="tab-pane fade in active">
+                            <h3>Upcoming</h3>
+                            <table class="table table-bordered table-hover table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Title</th>
+                                    <th>Location</th>
+                                    <th>Operations</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                    {{#each schList}}
+                                    <tr class="shec-row {{#if isLike}}warning{{/if}}">
+                                        <td>{{Date}}</td>
+                                        <td>{{Title}}</td>
+                                        <td>{{Location}}</td>
+
+                                        <td>
+                                            <button class = "btn {{#if isLike}}btn-warning{{/if}} show-on-hover action-like" data-id="{{_id}}"> <span class="glyphicon glyphicon-heart-empty "></span>  </button>
+                                            <button class = "btn btn-danger show-on-hover action-delete " data-id="{{_id}}"> <span class="glyphicon glyphicon-remove"></span>  </button>
+                                        </td>
+                                    </tr>
+                                    {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="candidate" class="tab-pane fade">
+                            <h3>Candidate</h3>
+                            <table class="table table-bordered table-hover table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Title</th>
+                                    <th>Location</th>
+                                    <th>Operations</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {{#each schList}}
+                                <tr class="shec-row {{#if isLike}}warning{{/if}}">
+                                    <td>{{Date}}</td>
+                                    <td>{{Title}}</td>
+                                    <td>{{Location}}</td>
+
+
+                                    <td>
+                                        <button class = "btn {{#if isLike}}btn-warning{{/if}} show-on-hover action-like" data-id="{{_id}}"> <span class="glyphicon glyphicon-heart-empty "></span>  </button>
+                                        <button class = "btn btn-danger show-on-hover"> <span class="glyphicon glyphicon-remove"></span>  </button>
+                                    </td>
+                                </tr>
+                                {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="history" class="tab-pane fade">
+                            <h3>History</h3>
+                            <table class="table table-bordered table-hover table-striped">
+                                <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Title</th>
+                                    <th>Location</th>
+                                    <th>Operation</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                {{#each schList}}
+                                <tr class="shec-row {{#if isLike}}warning{{/if}}">
+                                    <td>{{Date}}</td>
+                                    <td>{{Title}}</td>
+                                    <td>{{Location}}</td>
+
+                                    <td>
+                                        <button class = "btn {{#if isLike}}btn-warning{{/if}} show-on-hover action-like" data-id="{{_id}}"> <span class="glyphicon glyphicon-heart-empty "></span>  </button>
+                                        <button class = "btn btn-danger show-on-hover"> <span class="glyphicon glyphicon-remove"></span>  </button>
+                                    </td>
+                                </tr>
+                                {{/each}}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="user_msg">
+                    <h3>User Messages:</h3>
+                    <table class="table table-bordered table-hover table-striped">
+                        <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Content</th>
+                            <th>Date</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {{#each msgList}}
+                            <tr>
+                            <td>{{Name}}</td>
+                            <td>{{Content}}</td>
+                            <td>{{Date}}</td>
+                            </tr>
+                        {{/each}}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js">
+    </script>
+
+</template>

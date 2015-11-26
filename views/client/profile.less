@@ -1,0 +1,97 @@
+.profile_page {
+  background: linear-gradient(to bottom, #1e5799 0%,#7db9e8 100%);
+  padding: 30px;
+
+  h1 {
+    color: white;
+  }
+  .content-wrapper {
+    margin: 0 auto;
+    padding: 30px 10px;
+    width: 950px;
+    background-color: white;
+    // Clearfix
+    &:after {
+      content: ' ';
+      visibility: hidden;
+      display: block;
+      height: 0;
+      clear: both;
+    }
+  }
+}
+
+.left_section.col-md-4{
+  .left-fixed{
+    width: 300px;
+    margin: 0 auto;
+
+  }
+  padding-left: 20px;
+
+
+  .user_img{
+    text-align: center;
+    .btn {
+      display: inline-block;
+      margin: 5px 0;
+      width: 80%;
+    }
+  }
+
+  .user_bg{
+    .form-horizontal {
+      padding: 15px;
+    }
+  }
+
+  .house_preference{
+    .house_preference_tag_wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-content: flex-start;
+      align-items: flex-start;
+      .house_preference_tag {
+        display: block;
+        order: -1;
+        margin: 0 40% 0 0;
+        width: 60%;
+      }
+    }
+  }
+}
+
+
+
+
+
+.right_section.col-md-8 {
+  padding-right: 20px;
+
+
+  .freq_location{
+
+    .map{
+
+      height: 600px;
+    }
+  }
+
+  .scheduled_showing{
+
+    .shec-row {
+      .show-on-hover {
+        visibility: hidden;
+      }
+      &:hover .show-on-hover {
+        visibility: visible;
+      }
+    }
+  }
+
+  .user_msg{
+
+  }
+}
