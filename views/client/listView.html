@@ -1,4 +1,380 @@
 <template name="listView">
-<h1>ListView Page Test</h1>
-<button class="btn btn-default goToHome" type="submit">Go Home</button>
+<style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }
+  </style>
+	<div class="row">
+		<div class="col-sm-6">
+			<div id="box">
+				<div> price</div>
+				$0 ~ $3000
+  				<div class="progress">
+  					$500
+    				<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="10" style="width:30%">
+    				</div>
+  				</div>
+
+				<div> Location</div>
+				Campus center ~ Suburb
+				<div class="progress">
+    				<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="10" style="width:50%">
+    				</div>
+  				</div>
+  				<div> Space</div>
+  				0 square feet - 2000 square feet
+				<div class="progress">
+					360 sf
+    				<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="10" style="width:40%">
+    				</div>
+  				</div>    
+  				<div > Apartment Type </div>                                    
+  				<div class="dropdown">
+    			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Entire House
+    			<span class="caret"></span></button>
+    			<ul class="dropdown-menu">
+      				<li><a href="#">Studio</a></li>
+      				<li><a href="#">1B1B</a></li>
+      				<li><a href="#">2B2B</a></li>
+    			</ul>
+  				</div>
+  				<div > Management Company </div>
+  				<div class="dropdown">
+    			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">University
+    			<span class="caret"></span></button>
+    			<ul class="dropdown-menu">
+      				<li><a href="#">CPM</a></li>
+      				<li><a href="#">UG</a></li>
+    			</ul>
+  				</div>
+  				<div > Renting Session </div>
+  				<div class="dropdown">
+    			<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Academic Year
+    			<span class="caret"></span></button>
+    			<ul class="dropdown-menu">
+      				<li><a href="#">12 months</a></li>
+      				<li><a href="#">summer</a></li>
+      				<li><a href="#">spring</a></li>
+      				<li><a href="#">fall</a></li>
+    			</ul>
+  				</div>
+			</div>
+
+			
+		</div>
+		<div class="col-sm-6">
+			<div id="result-maps"></div>
+		</div>
+	</div>
+
+	<h1 class="comment-title">Here are your results:</h1>
+	<div id="resultbox">
+		<div class="row">
+		<div class="col-sm-4">
+			<div id="main-photo"></div>
+			<div id="small-photos">
+				<div id="small-photo1"></div>
+				<div id="small-photo2"></div>
+				<div id="small-photo3"></div>
+				<div id="small-photo4"></div>
+				<div id="small-photo5"></div>
+				<div id="small-photo6"></div>
+			</div>
+		</div>
+		<div class="col-sm-5">
+			<h1 class="apartment-title"><u>408 East Daniel</u></h1>
+			<h4 class="address">408 E Daniel St, Champaign, IL 61820</h4>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>$2022/mo</th>
+						<th>4Bed / 2Bath</th>
+						<th>Agent: Bankier</th>
+					</tr>
+				</thead>
+				
+			</table>
+			<div class="facts">
+				<ul>
+					<li>Free high speed internet</li>
+					<li>Intercom System</li>
+					<li>Elevator</li>
+					<li>Jacuzzi</li>
+					<li>Parking Available</li>
+				</ul>
+
+				<ul>
+					<li>Central Air</li>
+					<li>Dishwasher</li>
+					<li>Washer/Dryer Unit</li>
+					<li>Balconies off Each Room</li>
+					<li>50" Flat Screen TV</li>
+				</ul>
+			</div>
+			<div class="facts">
+				<li>4 bedroom 2 1/2 bathroom apartments redefine luxury. </li>
+				<li>Unequaled amenities and a Green Street location in the heart of Campus town. </li>
+				<li>Expansive windows provide lots of natural sunlight.</li>
+			</div>
+		</div>
+		<div>
+			<tbody>
+					<tr>
+						<td><img src ="stars.png"><span id="comment-number"></span></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+		</div>
+	</div>
+</div>
+
+	<div id="resultbox">
+		<div class="row">
+		<div class="col-sm-4">
+			<div id="main-photo"></div>
+			<div id="small-photos">
+				<div id="small-photo1"></div>
+				<div id="small-photo2"></div>
+				<div id="small-photo3"></div>
+				<div id="small-photo4"></div>
+				<div id="small-photo5"></div>
+				<div id="small-photo6"></div>
+			</div>
+		</div>
+		<div class="col-sm-5">
+			<h1 class="apartment-title"><u>408 East Daniel</u></h1>
+			<h4 class="address">408 E Daniel St, Champaign, IL 61820</h4>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>$2022/mo</th>
+						<th>4Bed / 2Bath</th>
+						<th>Agent: Bankier</th>
+					</tr>
+				</thead>
+				
+			</table>
+			<div class="facts">
+				<ul>
+					<li>Free high speed internet</li>
+					<li>Intercom System</li>
+					<li>Elevator</li>
+					<li>Jacuzzi</li>
+					<li>Parking Available</li>
+				</ul>
+
+				<ul>
+					<li>Central Air</li>
+					<li>Dishwasher</li>
+					<li>Washer/Dryer Unit</li>
+					<li>Balconies off Each Room</li>
+					<li>50" Flat Screen TV</li>
+				</ul>
+			</div>
+			<div class="facts">
+				<li>4 bedroom 2 1/2 bathroom apartments redefine luxury. </li>
+				<li>Unequaled amenities and a Green Street location in the heart of Campus town. </li>
+				<li>Expansive windows provide lots of natural sunlight.</li>
+			</div>
+		</div>
+		<div>
+			<tbody>
+					<tr>
+						<td><img src ="stars.png"><span id="comment-number"></span></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+		</div>
+	</div>
+</div>
+
+	<div id="resultbox">
+		<div class="row">
+		<div class="col-sm-4">
+			<div id="main-photo"></div>
+			<div id="small-photos">
+				<div id="small-photo1"></div>
+				<div id="small-photo2"></div>
+				<div id="small-photo3"></div>
+				<div id="small-photo4"></div>
+				<div id="small-photo5"></div>
+				<div id="small-photo6"></div>
+			</div>
+		</div>
+		<div class="col-sm-5">
+			<h1 class="apartment-title"><u>408 East Daniel</u></h1>
+			<h4 class="address">408 E Daniel St, Champaign, IL 61820</h4>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>$2022/mo</th>
+						<th>4Bed / 2Bath</th>
+						<th>Agent: Bankier</th>
+					</tr>
+				</thead>
+				
+			</table>
+			<div class="facts">
+				<ul>
+					<li>Free high speed internet</li>
+					<li>Intercom System</li>
+					<li>Elevator</li>
+					<li>Jacuzzi</li>
+					<li>Parking Available</li>
+				</ul>
+
+				<ul>
+					<li>Central Air</li>
+					<li>Dishwasher</li>
+					<li>Washer/Dryer Unit</li>
+					<li>Balconies off Each Room</li>
+					<li>50" Flat Screen TV</li>
+				</ul>
+			</div>
+			<div class="facts">
+				<li>4 bedroom 2 1/2 bathroom apartments redefine luxury. </li>
+				<li>Unequaled amenities and a Green Street location in the heart of Campus town. </li>
+				<li>Expansive windows provide lots of natural sunlight.</li>
+			</div>
+		</div>
+		<div>
+			<tbody>
+					<tr>
+						<td><img src ="stars.png"><span id="comment-number"></span></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+		</div>
+	</div>
+</div>
+
+	<div id="resultbox">
+		<div class="row">
+		<div class="col-sm-4">
+			<div id="main-photo"></div>
+			<div id="small-photos">
+				<div id="small-photo1"></div>
+				<div id="small-photo2"></div>
+				<div id="small-photo3"></div>
+				<div id="small-photo4"></div>
+				<div id="small-photo5"></div>
+				<div id="small-photo6"></div>
+			</div>
+		</div>
+		<div class="col-sm-5">
+			<h1 class="apartment-title"><u>408 East Daniel</u></h1>
+			<h4 class="address">408 E Daniel St, Champaign, IL 61820</h4>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>$2022/mo</th>
+						<th>4Bed / 2Bath</th>
+						<th>Agent: Bankier</th>
+					</tr>
+				</thead>
+				
+			</table>
+			<div class="facts">
+				<ul>
+					<li>Free high speed internet</li>
+					<li>Intercom System</li>
+					<li>Elevator</li>
+					<li>Jacuzzi</li>
+					<li>Parking Available</li>
+				</ul>
+
+				<ul>
+					<li>Central Air</li>
+					<li>Dishwasher</li>
+					<li>Washer/Dryer Unit</li>
+					<li>Balconies off Each Room</li>
+					<li>50" Flat Screen TV</li>
+				</ul>
+			</div>
+			<div class="facts">
+				<li>4 bedroom 2 1/2 bathroom apartments redefine luxury. </li>
+				<li>Unequaled amenities and a Green Street location in the heart of Campus town. </li>
+				<li>Expansive windows provide lots of natural sunlight.</li>
+			</div>
+		</div>
+		<div>
+			<tbody>
+					<tr>
+						<td><img src ="stars.png"><span id="comment-number"></span></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+		</div>
+	</div>
+</div>
+
+	<div id="resultbox">
+		<div class="row">
+		<div class="col-sm-4">
+			<div id="main-photo"></div>
+			<div id="small-photos">
+				<div id="small-photo1"></div>
+				<div id="small-photo2"></div>
+				<div id="small-photo3"></div>
+				<div id="small-photo4"></div>
+				<div id="small-photo5"></div>
+				<div id="small-photo6"></div>
+			</div>
+		</div>
+		<div class="col-sm-5">
+			<h1 class="apartment-title"><u>408 East Daniel</u></h1>
+			<h4 class="address">408 E Daniel St, Champaign, IL 61820</h4>
+			<table class="table">
+				<thead>
+					<tr>
+						<th>$2022/mo</th>
+						<th>4Bed / 2Bath</th>
+						<th>Agent: Bankier</th>
+					</tr>
+				</thead>
+				
+			</table>
+			<div class="facts">
+				<ul>
+					<li>Free high speed internet</li>
+					<li>Intercom System</li>
+					<li>Elevator</li>
+					<li>Jacuzzi</li>
+					<li>Parking Available</li>
+				</ul>
+
+				<ul>
+					<li>Central Air</li>
+					<li>Dishwasher</li>
+					<li>Washer/Dryer Unit</li>
+					<li>Balconies off Each Room</li>
+					<li>50" Flat Screen TV</li>
+				</ul>
+			</div>
+			<div class="facts">
+				<li>4 bedroom 2 1/2 bathroom apartments redefine luxury. </li>
+				<li>Unequaled amenities and a Green Street location in the heart of Campus town. </li>
+				<li>Expansive windows provide lots of natural sunlight.</li>
+			</div>
+		</div>
+		<div>
+			<tbody>
+					<tr>
+						<td><img src ="stars.png"><span id="comment-number"></span></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+		</div>
+	</div>
+</div>
+
+
+	
 </template>
