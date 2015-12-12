@@ -16,25 +16,30 @@
   padding: 14px 10px;
   text-transform: uppercase;
 }
+.navbar{
+  margin-bottom: 0px !important;
+}
 
 .nav li {
   display: inline-block;
 }
 
 .jumbotron {
-  background-image:url("images/background.png");
+  background-image:url("background.png");
   height: 500px;
   background-repeat: no-repeat;
   background-size: cover;
 }
+.container
 
 .jumbotron .container {
   position: relative;
   top:100px;
+  width:100%;
 }
 
 .jumbotron h1 {
-  color: #fff;
+  color: #fff !important;
   font-size: 48px;  
   font-family: Open Sans;
   font-weight: 700;

@@ -7,7 +7,6 @@
                     <div class="user_img">
                         <img src="Minions_bob_and_his_teddy_bear.jpg" alt="Bob" style="width:260px;height:260px;border: 5px;border-style: inset">
                         <h2>Bob</h2>
-                        <button type="button" class="btn btn-success">View</button>
                         <button type="button" class="btn btn-danger">Edit</button>
                     </div>
                     <div class="user_bg">
@@ -45,11 +44,13 @@
                         <span id="siebel" class="tm-tag tm-input-base tm-tag-success">Siebel Center
                             <a href="#" class="tm-tag-remove" id="siebel_remove" tagidtoremove="siebel">x</a>
                         </span>
-                    </div>
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-danger" onclick="show_map()">
-                        Edit
+                         <!-- Button trigger modal -->
+                    <button style="padding-top:4px;padding-bottom:4px;margin-bottom:5px;" type="button" class="btn btn-sm btn-success" onclick="show_map()">
+                        +
                     </button>
+                    </div>
+                    
+                   
 
                     <!-- Modal -->
                     <div class="modal fade" id="google_maps" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -83,14 +84,12 @@
                 <div class="scheduled_showing">
                     <h3>Scheduled Showing:</h3>
                     <ul class="nav nav-tabs">
-                        <li class="active"><a data-toggle="tab" href="#upcoming">Upcoming</a></li>
-                        <li><a data-toggle="tab" href="#candidate">Candidate</a></li>
-                        <li><a data-toggle="tab" href="#history">History</a></li>
+                        <li class="active"><a data-toggle="tab" href="#upcoming">Favorites</a></li>
+                        <li><a data-toggle="tab" href="#history">Recently Viewed</a></li>
                     </ul>
 
                     <div class="tab-content">
                         <div id="upcoming" class="tab-pane fade in active">
-                            <h3>Upcoming</h3>
                             <table class="table table-bordered table-hover table-striped">
                                 <thead>
                                 <tr>
@@ -108,7 +107,6 @@
                                         <td>{{Location}}</td>
 
                                         <td>
-                                            <button class = "btn {{#if isLike}}btn-warning{{/if}} show-on-hover action-like" data-id="{{_id}}"> <span class="glyphicon glyphicon-heart-empty "></span>  </button>
                                             <button class = "btn btn-danger show-on-hover action-delete " data-id="{{_id}}"> <span class="glyphicon glyphicon-remove"></span>  </button>
                                         </td>
                                     </tr>
@@ -145,7 +143,6 @@
                             </table>
                         </div>
                         <div id="history" class="tab-pane fade">
-                            <h3>History</h3>
                             <table class="table table-bordered table-hover table-striped">
                                 <thead>
                                 <tr>

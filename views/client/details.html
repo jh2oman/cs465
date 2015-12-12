@@ -1,6 +1,6 @@
 <template name="details">
 
-	<div class="row">
+	<div class="row" style="margin-top:20px;">
 		<div class="col-sm-4">
 			<div id="main-photo"></div>
 			<div id="small-photos">
@@ -28,6 +28,14 @@
 						<td><img src ="stars.png"><span id="comment-number">23 comments</span></td>
 						<td></td>
 						<td></td>
+					</tr>
+				</tbody>
+			</table>
+			<table class="table">
+				<tbody>
+					<tr>
+						<td style="border-top:0px;"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">Contact Property Manager</button></td>
+						<td style="border-top:0px;"><a class="btn btn-default" href="#" role="button">Add to Favorites</a></td>
 					</tr>
 				</tbody>
 			</table>
@@ -116,4 +124,32 @@
 				</div>
 			</div>
 		</div>
+
+
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="exampleModalLabel">New message</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label for="recipient-name" class="control-label">Recipient:</label>
+            <input type="text" class="form-control" id="recipient-name" value="Bankier Apartments">
+          </div>
+          <div class="form-group">
+            <label for="message-text" class="control-label">Message:</label>
+            <textarea class="form-control" id="message-text"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
 		</template>

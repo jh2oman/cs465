@@ -2,6 +2,15 @@
 body{
 	width:100%;
 }
+
+.goToHome, .goToDetails, .goToListView, .goToProfile, .goToAddListing{
+  cursor: pointer;
+}
+
+#section1 {padding-top:0px;color: #000; background-color: #ffffff;}
+  #section2 {padding-top:0px;color: #000; background-color: #ffffff;}
+  #section3 {padding-top:0px;color: #000; background-color: #ffffff;}
+
 .row{
 	margin-right: 0px;
 	margin-left: 0px;
@@ -16,27 +25,29 @@ body{
   background: #BABABA;
 }
 #box{
-  height:430px;
-  width:600px;
-  padding: 10px;
-  border: 2px solid black;
-  
+  width:100%;
+  min-width:600px;
 
+  padding: 10px;
+  border: 1px solid gray;
 }
 
-#resultbox{
-  height:380px;
-  width:1245px;
+
+.resultbox{
+  height:auto;
+  width:100%;
   padding: 10px;
   border: 1.5px solid gray;
-  margin-left: 15px;
-
+  margin-bottom: 10px;
+}
+.resultbox:hover{
+  cursor:pointer;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.37);
 }
 
 div.container {
-    background-color: #FF0000;
     margin: auto;   
-    width: 304px;
+    width: 100%;
 }
 
 div.piccontainer {  
@@ -57,7 +68,7 @@ div.div2 {
 }
 #main-photo{
 	margin:0 auto;
-	height:300px;
+	height:200px;
 	max-width: 400px;
 	overflow:hidden;
 	background: url("apartment-room.jpg");
@@ -126,15 +137,22 @@ margin:0 auto;
   box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.37);
   background: url("slider.png");
 }
-
+.left-side{
+  width:60%;
+  padding:15px;
+}
 #result-maps{
-
-  height:430px;
-  width:600px;
-  background: url("result-maps.png");
-  background-repeat: no-repeat;
-  background-position: center;
+  height:100%;
+  width:100%;
   box-shadow:0 2px 4px 0 rgba(0, 0, 0, 0.37);
+}
+#result-maps-wrap{
+  position:fixed;
+  padding:15px;
+  height:430px;
+  width: 40%;
+  top:50px;
+  right:0px;
 }
 .address{
 	font-style: italic;

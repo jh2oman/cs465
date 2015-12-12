@@ -1,4 +1,197 @@
-<template name="addListing">
-<h1>Add Listings Page</h1>
-<button class="btn btn-default goToHome" type="submit">Go Home</button>
+<template name="addListing1">
+​
+
+<nav class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand">Add your place in three easy steps!</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a class="goToAddListing1" href="" style="color:#FFF;">General Info</a></li>
+          <li><a class="goToAddListing2" href="">Description</a></li>
+          <li><a class="goToAddListing3" href="">Location</a></li>
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>    
+​
+<div id="section1" class="container-fluid">
+	<div class="col-sm-8">
+	  	<div class="row">
+			<h1 class="apartment-title">General Info</h1>
+			<div class="row">
+				<div class="col-sm-4">
+					<img src="https://fpimage.cdnpk.net/free-icon/home_318-42210.png" class="img-thumbnail" alt="House">
+					<button type="button" class="btn btn-primary btn-md">House</button>
+				</div>
+				<div class="col-sm-4">
+					<img src="http://freeflaticons.net/wp-content/uploads/2014/10/tall-copy-1412672310g4n8k.png" class="img-thumbnail" alt="Apartment">
+					<button type="button" class="btn btn-primary btn-md">Apartment</button>
+				</div>
+				<div class="col-sm-4">
+					<img src="http://newcondo4u.com/wp-content/uploads/2015/10/hotel_vacation-icon_without-relection_01-2.png" class="img-thumbnail" alt="Condo">
+					<button type="button" class="btn btn-primary btn-md">Condo</button>
+				</div>
+			</div>
+		</div>
+		<br><br><br><br><br><br>
+		<div class="row">
+			<div class="col-sm-4">
+				<div class="form-group">
+			      <label for="inputdefault">Rooms</label>
+			      <input class="form-control" id="inputdefault" type="text">
+			    </div>
+			</div>
+			<div class="col-sm-4">
+				<div class="form-group">
+			      <label for="inputdefault">Bathrooms <span class="glyphicon glyphicon-info-sign"></span></label>
+			      <input class="form-control" id="inputdefault" type="text">
+			    </div>
+			</div>
+			<div class="col-sm-4">
+				<div class="form-group">
+			      <label for="inputdefault">Price <span class="glyphicon glyphicon-info-sign"></span></label>
+			      <input class="form-control" id="inputdefault" type="text">
+			    </div>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-3">
+		<img class="img-responsive" src="https://fpimage.cdnpk.net/free-icon/bathtub-with-opened-shower_318-63387.png">
+			<blockquote>
+				<p>Put the number of full bathrooms to the left side of the decimal point and the number of half bathrooms to the right of the decimal point (e.g., "2.1" would mean 2 full baths and 1 half bath; "3.2" would mean 3 full baths and 2 half baths).</p>
+				<footer>Wikipedia</footer>
+			</blockquote>
+	</div>	
+</div>
 </template>
+<template name="addListing2">
+
+	<nav class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand">Add your place in three easy steps!</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a class="goToAddListing1" href="">General Info</a></li>
+          <li><a class="goToAddListing2" href=""  style="color:#FFF;">Description</a></li>
+          <li><a class="goToAddListing3" href="">Location</a></li>
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>    
+
+<div id="section2" class="container-fluid">
+	
+	<div class="col-sm-8">
+		<h1 class="apartment-title">Description</h1>
+		<form class="form-horizontal" role="form">
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="email">Title:</label>
+					<div class="col-sm-10">
+						<input class="form-control" id="title" placeholder="Ex: Quiet house at 404 Not Found Street">
+					</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="pwd">Summary:</label>
+					<div class="col-sm-10"> 
+				  		<textarea class="form-control" rows="10" id="comment" placeholder="Tell us what makes your place special!"></textarea>
+					</div>
+			</div>
+			
+		</form>
+	</div>
+	<div class= "col-sm-4">
+		<h1 class="apartment-title">Need Ideas?</h1>
+		<div class="row">
+			<div class="col-sm-4">
+				<img src="http://homecut.info/wp-content/uploads/2015/06/school-building-icon-jti7shuuw.png" class="img-thumbnail" alt="School">
+				School
+			</div>
+			<div class="col-sm-4">
+				<img src="http://westgatehouse.org/wp-content/uploads/2013/11/icons_pets.png" class="img-thumbnail" alt="Pets">
+				Pets
+			</div>
+			<div class="col-sm-4">
+				<img src="http://findicons.com/files/icons/2219/dot_pictograms/128/bus.png" class="img-thumbnail" alt="Bus">
+				Bus
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4">
+				<img src="http://icons.iconarchive.com/icons/icons8/android/512/Household-Washing-Machine-icon.png" class="img-thumbnail" alt="washing">
+				Washing Machine
+			</div>
+			<div class="col-sm-4">
+				<img src="http://www.sportsvolusia.com/resources/images/swimming.png" class="img-thumbnail" alt="Pool">
+				Pool
+			</div>
+			<div class="col-sm-4">
+				<img src="http://simpleicon.com/wp-content/uploads/Shopping-Cart-11.png" class="img-thumbnail" alt="Shopping">
+				Shopping
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-4">
+				<img src="https://d30y9cdsu7xlg0.cloudfront.net/png/19328-200.png" class="img-thumbnail" alt="Hiking">
+				Hiking
+			</div>
+			<div class="col-sm-4">
+				<img src="http://icons.iconarchive.com/icons/icons8/ios7/256/Weather-Partly-Cloudy-Rain-icon.png" class="img-thumbnail" alt="Weather">
+				Nice Weather
+			</div>
+			<div class="col-sm-4">
+				<img src="http://downloadicons.net/sites/default/files/fast-food-icon-45969.png" class="img-thumbnail" alt="Dining">
+				Dining
+			</div>
+		</div>
+	</div>
+</div>
+</template>
+<template name="addListing3">
+	<nav class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand">Add your place in three easy steps!</a>
+    </div>
+    <div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li><a class="goToAddListing1" href="" >General Info</a></li>
+          <li><a class="goToAddListing2" href="">Description</a></li>
+          <li><a class="goToAddListing3" href="" style="color:#FFF;">Location</a></li>
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>    
+<div id="section3" class="container-fluid">
+	<h1 class="apartment-title">Location</h1>
+  	<iframe src="https://google-developers.appspot.com/maps/documentation/javascript/examples/full/places-autocomplete" width="100%" height="400px" frameBorder="0"></iframe>
+  	<button type="button" class="btn btn-success btn- pull-right btn-lg goToDetails">Submit</button>
+</div>
+​</template>
